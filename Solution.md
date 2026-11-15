@@ -1,4 +1,4 @@
-# Solution
+# polyvios_fotiadis_CCS6442 Solution
 For step 19, I made a pull request based on `develop`, in which `main_runner.py` was created, since it didn't exist on `develop` or `master` but it did on other branches. The pull request also brought over the code from step 1. 
 
 For step 21, a pull request was made based on the `develop` branch called Version 1 release with all the changes that have been made in it so far. After it was reviewed and merged into `master`, a tag for the merge commit was made with GitKraken called `version1.0`.
