@@ -1,0 +1,5 @@
+FROM alpine:latest
+RUN apk add --no-cache postgresql-client bash
+COPY checkstatus.sh /checkstatus.sh
+RUN chmod +x /checkstatus.sh
+ENTRYPOINT ["/checkstatus.sh"]
