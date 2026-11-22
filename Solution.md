@@ -18,3 +18,6 @@ For the initial files I was asked to create, like `docker-compose.yml` and `.env
 There wasn't a `checkstatus.sh` file in it though, so I downloaded an .sh sample file online, renamed it and edited it appropriately.
 I run docker compose up locally to ensure the changes I did worked properly, and at first I found out I had to install Docker Desktop for it to work. Then when I run it again, I was warned that the attribute `version`, which was in the first line in `version: '3'` that was in `docker-compose.yml` is obsolete and will be ignored, so I removed it. I also had to properly reference `.env.example` in `docker-compose.yml` as it was only called `env.`.
 I also had to make a `Dockerfile` since it was necessary for the command to work, along with the `.dockerignore` as it was recommended to have(currently its a copy of the one in `fastapi-realworld-example-app`).
+All of the above was made in a branch called `feature/docker-setup`, which was based on `develop`, and was then made into a pull request and merged back into `develop`.
+
+For the next step, I replaced `alpine:latest` with `citycase/assessment2:1.0` in `src/Production-Dockerfile`. `docker run --rm citycase/assessment2:1.0` was run in the terminal and like the assignment stated, it didn't work. A screenshot of the result was taken and uploaded.
