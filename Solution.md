@@ -20,4 +20,8 @@ I run docker compose up locally to ensure the changes I did worked properly, and
 I also had to make a `Dockerfile` since it was necessary for the command to work, along with the `.dockerignore` as it was recommended to have(currently its a copy of the one in `fastapi-realworld-example-app`).
 All of the above was made in a branch called `feature/docker-setup`, which was based on `develop`, and was then made into a pull request and merged back into `develop`.
 
-For the next step, I replaced `alpine:latest` with `citycase/assessment2:1.0` in `src/Production-Dockerfile`. `docker run --rm citycase/assessment2:1.0` was run in the terminal and like the assignment stated, it didn't work. A screenshot of the result was taken and uploaded.
+For the next step, I replaced `alpine:latest` with `citycase/assessment2:1.0` in `src/Production-Dockerfile`. `docker run --rm citycase/assessment2:1.0` was run in the terminal and like the assignment stated, it didn't work. A screenshot of the result was taken and uploaded. A pull request was made, but I forgot to base it on `develop` instead of `master`, so I closed it and made a new one, which was then merged.
+
+Next a hotfix branch was made, called `hotfix/outdated-image`, which replaced `citycase/assessment2:1.0` with `citycase/assessment2:latest`, as this was the tag that came up when I searched for `citycase/assessment2` on Docker Hub. Just to be sure, after replacing it, I run `docker run --rm citycase/assessment2:latest` on the terminal and it did state that it was indeed the latest version.
+
+Finally a pull request of the branch was made which was merged into develop and master.
